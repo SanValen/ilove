@@ -749,4 +749,66 @@ function reloadAnimationsIfNeeded() {
 }
 
 // Llamar a la función de verificación
+
 setTimeout(reloadAnimationsIfNeeded, 5000);
+// Función para ajustar el corazón dinámicamente según el dispositivo
+function adjustHeartForDevice() {
+    const heartContainer = document.querySelector('.heart-container');
+    if (!heartContainer) return;
+    
+    function updateHeartSize() {
+        const screenWidth = window.innerWidth;
+        const screenHeight = window.innerHeight;
+        const isLandscape = screenWidth > screenHeight;
+        
+        if (screenWidth <= 320) {
+            // Móviles muy pequeños
+            heartContainer.style.width = '110px';
+            heartContainer.style.height = '110px';
+            heartContainer.style.transform = 'scale(0.75)';
+        } else if (screenWidth <= 360) {
+            // Móviles pequeños
+            heartContainer.style.width = '120px';
+            heartContainer.style.height = '120px';
+            heartContainer.style.transform = 'scale(0.8)';
+        } else if (screenWidth <= 480) {
+            // Móviles medianos
+            heartContainer.style.width = '140px';
+            heartContainer.style.height = '140px';
+            heartContainer.style.transform = 'scale(0.85)';
+        } else if (screenWidth <= 768) {
+            // Tablets y móviles grandes
+            heartContainer.style.width = '160px';
+            heartContainer.style.height = '160px';
+            heartContainer.style.transform = 'scale(0.9)';
+        } else {
+            // Desktop
+            heartContainer.style.width = '250px';
+            heartContainer.style.height = '250px';
+            heartContainer.style.transform = 'scale(1)';
+        }
+        
+        // Ajuste adicional para modo horizontal
+        if (isLandscape && screenWidth <= 768) {
+            heartContainer.style.width = '100px';
+            heartContainer.style.height = '100px';
+            heartContainer.style.transform = 'scale(0.7)';
+        }
+    }
+    
+    // Ejecutar al cargar
+    updateHeartSize();
+    
+    // Ejecutar al redimensionar
+    window.addEventListener('resize', updateHeartSize);
+    
+    // Ejecutar al cambiar orientación
+    window.addEventListener('orientationchange', function() {
+        setTimeout(updateHeartSize, 100);
+    });
+}
+
+// Ejecutar cuando el DOM esté listo
+document.addEventListener('DOMContentLoaded', function() {
+    adjustHeartForDevice();
+});
