@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería - San Valentín</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<style>
+    /* ELIMINAR ESPACIO SUPERIOR - GALERÍA */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+.stars {
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: 0 20px 20px 20px; /* Eliminado padding-top */
+}
+
+.gallery {
+    padding: 20px 0 !important; /* Reducido de 80px 0 */
+    margin-top: 0 !important;
+}
+
+.section-title {
+    margin-top: 10px !important;
+    margin-bottom: 30px !important; /* Reducido de 60px */
+}
+
+/* Asegurar que el carrusel no tenga espacio extra */
+.carousel-container {
+    margin-top: 0;
+    padding-top: 10px; /* Reducido de 30px */
+}
+
+/* Reducir espacio en las slides */
+.carousel-slide {
+    padding: 10px; /* Reducido de 20px */
+}
+
+/* Eliminar cualquier espacio adicional */
+.additional-gallery {
+    padding: 30px 0 !important; /* Reducido de 80px 0 */
+    margin-top: 0 !important;
+}
+
+footer {
+    padding: 20px 0 !important; /* Reducido de 40px 0 */
+    margin-top: 20px !important; /* Reducido de 40px */
+}
+</style>
+    <!-- Fondo de estrellas -->
+    <div class="stars" id="stars-container"></div>
+    <div class="container">
+    
+
+        <!-- Gallery Section -->
+        <section class="gallery" id="gallery">
+            <h2 class="section-title">Pensamientos de Alex</h2>
+            
+            <div class="carousel-container">
+                <div class="carousel-track">
+                   <!-- Slide 1 -->
+<div class="carousel-slide active">
+    <div class="slide-content">
+        <div class="slide-text">
+            <h3>Lo que nunca dije</h3>
+            <p>Hoy es tu cumpleaños, y no podía dejar pasar este día sin escribirte. No para decir algo nuevo, sino para recordarte lo que siento y lo especial que eres para mí. Hay personas que llegan sin hacer ruido y se quedan de una forma que no se va, y tú eres una de ellas. Estas palabras son solo una pequeña parte de todo el cariño que te tengo, y nacen con la misma sinceridad con la que un día me animé a decirte lo que sentía.</p>
+            <div class="slide-date">
+                <i class="fas fa-calendar-alt"></i>
+                24 de Noviembre, 2025
+            </div>
+        </div>
+        <div class="slide-image">
+            <div class="image-placeholder">  
+             <img src="Cumpleaños.png">
+             <span class="image-date"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 2 -->
+<div class="carousel-slide">
+    <div class="slide-content reverse">
+        <div class="slide-image">
+            <div class="image-placeholder">
+            <img src="CONOCER.png">
+            </div>
+        </div>
+        <div class="slide-text">
+            <h3>Desde que te conocí</h3>
+            <p>Desde que te conocí, algo en mí cambió sin que me diera cuenta. Las conversaciones se hicieron más bonitas, las risas más sinceras y los momentos más especiales. Poco a poco empezaste a ocupar un lugar importante en mi vida, de esos que no se fuerzan y simplemente se quedan.</p>
+            <div class="slide-date">
+                <i class="fas fa-calendar-alt"></i>
+                2024
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 3 -->
+<div class="carousel-slide">
+    <div class="slide-content">
+        <div class="slide-text">
+            <h3>Lo que siento por ti</h3>
+            <p>Lo que siento por ti es real y nace de todo lo que eres. Me gustas por tu forma de ser, por cómo llegas sin esfuerzo y te quedas sin pedir nada. Pensarte me calma, verte me desarma y quererte se volvió algo natural, como si mi corazón hubiera sabido desde el inicio dónde quedarse.</p>
+            <div class="slide-date">
+                <i class="fas fa-calendar-alt"></i>
+                Siempre
+            </div>
+        </div>
+        <div class="slide-image">
+            <div class="image-placeholder">
+             <img src="Yo.jpeg">
+            
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 4 -->
+<div class="carousel-slide">
+    <div class="slide-content reverse">
+        <div class="slide-image">
+            <div class="image-placeholder">
+           <img src="POCO.jpeg">
+
+            </div>
+        </div>
+        <div class="slide-text">
+            <h3>Un pedacito de mi</h3>
+            <p>Esto que te escribo es un pedacito de mí, de lo más sincero que tengo. No busca promesas ni respuestas, solo ser real. Si alguna vez dudas de lo que significas, vuelve aquí y recuerda que hay un corazón que, incluso en silencio, sigue latiendo por ti.</p>
+            <div class="slide-date">
+                <i class="fas fa-calendar-alt"></i>
+                14 de Febrero, 2026
+            </div>
+        </div>
+    </div>
+</div>
+                </div>
+                
+                <!-- Carousel Navigation -->
+                <div class="carousel-nav">
+                    <button class="carousel-btn prev-btn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="carousel-dots">
+                        <span class="dot active" data-slide="0"></span>
+                        <span class="dot" data-slide="1"></span>
+                        <span class="dot" data-slide="2"></span>
+                        <span class="dot" data-slide="3"></span>
+                    </div>
+                    <button class="carousel-btn next-btn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Additional Gallery Content -->
+        <section class="additional-gallery">
+            <h2 class="section-title">Recuerdos Especiales</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-item-image">
+                    <img src="Conversando.png">
+                    </div>
+                    <div class="gallery-item-text">
+                        <h3>Las conversaciones que se quedaban</h3>
+                        <p>Hablar contigo siempre fue lindo. Entre bromas y temas simples, sin darme cuenta, empecé a sentirme en casa cada vez que compartíamos un momento.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-item-image">
+                        <img src="Recuerdo.jpg">
+                    </div>
+                    
+                    <div class="gallery-item-text">
+                        <h3>Ese lugar tranquilo</h3>
+                    
+                        <p>Aunque sé que fue creada por alguien, lo sentí real. Me imaginé a tu lado, compartiendo un momento en calma, como si el mundo se detuviera por un instante solo para nosotros.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-item-image">
+                        <img src="Tiempo.png">
+                    </div>
+                    <div class="gallery-item-text">
+                        <h3>Lo que el tiempo no borró</h3>
+                        <p>Aunque la vida nos llevó por caminos distintos, hay momentos que no se van. Se quedan conmigo, intactos, recordándome lo especial que fuiste y sigues siendo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <a href="index.html" class="cta-button" style="margin-bottom: 20px;">
+                <i class="fas fa-arrow-left"></i> Volver al Inicio
+            </a>
+            <p>Galería de San Valentín - El amor brilla como las estrellas</p>
+            <p style="margin-top: 10px; font-size: 0.9rem;">Diseñado con <i class="fas fa-heart" style="color: var(--primary);"></i> para ti</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
